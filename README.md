@@ -2,7 +2,7 @@
   <h1> ft_transcendence </h1>
 </div>
 
-![landing](https://github.com/barondugroove/ft_transcendence/assets/96781563/b2478374-441e-4765-8a41-659f4be9e76a)
+![ft_transcendence](https://github.com/barondugroove/ft_transcendence/assets/96781563/9de9a7fb-f097-4dc1-a7d9-95a52cbc8157)
 
 
 ## 📖 Description
