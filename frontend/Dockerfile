@@ -3,7 +3,7 @@ FROM node:18.17.1 AS build
 WORKDIR /app
 COPY ./angular .
 RUN npm install
-RUN npm run build --prod
+RUN npm run build --omit=dev
 
 # Stage 2: Setup NGINX
 FROM nginx:alpine
