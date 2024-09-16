@@ -16,7 +16,7 @@ RUN chmod 755 /usr/bin/django-entrypoint.sh
 COPY ./requirements.txt .
 
 # Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip -v install --no-cache-dir -r requirements.txt
 
 # Start the Django development server
 EXPOSE 8000
