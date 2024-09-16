@@ -28,9 +28,9 @@ re: clean volumes prod
 
 prod: volumes
 	@sed -i '1s/[^ ]*[^ ]/https:\/\//3' .env
-	@sed -i "2s/[^ ]*[^ ]/`ip addr show dev eth0 | grep -oP 'inet \K[\d.]+'`:8000/3" .env
+	@sed -i "2s/[^ ]*[^ ]/`ip addr show dev ens5 | grep -oP 'inet \K[\d.]+'`:8000/3" .env
 	@sed -i '1s/[^ ]*[^ ]/true/5' frontend/angular/src/env.ts
-	@sed -i "s/-ipserver-/`ip addr show dev eth0 | grep -oP 'inet \K[\d.]+'`/g" frontend/angular/src/env.ts
+	@sed -i "s/-ipserver-/`ip addr show dev ens5 | grep -oP 'inet \K[\d.]+'`/g" frontend/angular/src/env.ts
 	@docker compose -f docker-compose.prod.yml up --build
 
 dev: volumes
