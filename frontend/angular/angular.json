@@ -59,7 +59,7 @@
 					"buildOptimizer": true,
 					"vendorChunk": false,
 					"extractLicenses": true, 
-					"serviceWorker": true
+					"serviceWorker": false
 			},
             "development": {
               "buildOptimizer": false,
