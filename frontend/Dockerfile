@@ -18,7 +18,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copy the built Angular app from the build stage
-COPY --from=build /app/dist/your-app-name /usr/share/nginx/html/
+COPY --from=build /app/dist/ft_transcendence /usr/share/nginx/html/
 
 # Copy the NGINX configuration
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
