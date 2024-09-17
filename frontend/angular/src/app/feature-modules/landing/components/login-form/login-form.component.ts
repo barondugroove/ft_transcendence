@@ -9,8 +9,6 @@ import { CookieService } from 'src/app/services/cookie.service';
 import { ToastService } from 'src/app/services/toast.service';
 import { UserService } from 'src/app/services/user.service';
 
-import { NavbarComponent } from '../../../../shared-modules/shared/navbar/navbar.component';
-
 
 @Component({
 	selector: 'login-form',
