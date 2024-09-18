@@ -39,6 +39,7 @@ export class AuthService {
 	}
 
   	public signup(newUser: User) {
+		console.log(HTTP_MODE + IP_SERVER + '/users/signup/');
 		return this.http.post(HTTP_MODE + IP_SERVER + '/users/signup/', newUser);
 	}	
 
