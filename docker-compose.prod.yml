@@ -9,6 +9,8 @@ services:
             - ./frontend/nginx/ssl:/etc/nginx/ssl
         restart: always
         env_file: .env
+        networks:
+          - transcendence
 
     django:
         container_name: django
