@@ -1,5 +1,6 @@
 services:
     web:
+        container_name: angular
         build : ./frontend/
         ports:
             - "80:80"
@@ -9,6 +10,8 @@ services:
             - ./frontend/nginx/ssl:/etc/nginx/ssl
         restart: always
         env_file: .env
+        environment:
+          - IP_SERVER=https://django:8000
         networks:
           - transcendence
 
