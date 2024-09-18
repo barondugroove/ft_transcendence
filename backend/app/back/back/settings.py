@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['13.51.106.93', 'localhost', 'django']
 CORS_ALLOW_ALL_ORIGINS = True
 
-CSRF_TRUSTED_ORIGINS = ['https://13.51.106.93']
+CSRF_TRUSTED_ORIGINS = ['https://13.51.106.93/']
 
 # Application definition
 
