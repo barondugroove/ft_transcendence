@@ -31,13 +31,17 @@ CORS_ALLOWED_ORIGINS = [
     'https://13.51.106.93',
 ]
 
-CSRF_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = True
+
 CSRF_TRUSTED_ORIGINS = [
-	'13.51.106.96',
-	'https://13.51.106.93',
+    'https://13.51.106.93',
     'http://13.51.106.93',
-	'http://localhost'
+    'https://13.51.106.93:8000',  # Including the port
+    'http://13.51.106.93:8000',
+    'http://localhost',
+    'https://localhost',
 ]
+
 
 # Application definition
 
