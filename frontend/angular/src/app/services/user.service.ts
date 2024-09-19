@@ -30,12 +30,14 @@ export class UserService {
 		}
 		let avatarUrl: string = '';
 		if (ft_auth === false) {
-			avatarUrl = HTTP_MODE + IP_SERVER + avatar;
+			avatarUrl = HTTP_MODE + IP_SERVER.slice(0) + avatar;
+			avatarUrl.replace('/api', '');
 		}
 		else {
 			avatar = avatar.slice(10);
 			avatarUrl = avatar;
 			avatarUrl = 'https://' + avatarUrl;
+			avatarUrl.replace('/api', '');
 		}
 		return avatarUrl;
 	}
