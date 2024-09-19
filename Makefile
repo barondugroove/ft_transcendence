@@ -21,12 +21,31 @@ clean:
 	# @docker rm $(docker ps -a -q)
 	@/etc/init.d/redis-server stop
 
+ENV_FILE=.env
+ENV_TS_FILE=frontend/angular/src/env.ts
+
+# Command to retrieve the public IP of the EC2 instance using AWS CLI
+get_public_ip:
+	@INSTANCE_ID=$$(curl -s http://169.254.169.254/latest/meta-data/instance-id); \
+	PUBLIC_IP=$$(aws ec2 describe-instances --instance-ids $$INSTANCE_ID --query 'Reservations[0].Instances[0].PublicIpAddress' --output text); \
+	if [ -n "$$PUBLIC_IP" ]; then \
+		echo "Updating .env with public IP: $$PUBLIC_IP"; \
+		# Update the .env file
+		sed -i '/IP_SERVER=/d' $(ENV_FILE); \
+		echo "IP_SERVER=$${PUBLIC_IP}:8000" >> $(ENV_FILE); \
+		# Update the Angular env.ts file
+		echo "Updating Angular env.ts with public IP: $$PUBLIC_IP"; \
+		sed -i "s|IP_SERVER = .*|IP_SERVER = 'http://$${PUBLIC_IP}:8000';|g" $(ENV_TS_FILE); \
+	else \
+		echo "Failed to retrieve public IP"; \
+	fi
+
 stop:
 	@docker compose down
 
 re: clean volumes prod
 
-prod: volumes
+prod: get_public_ip volumes
 	@docker compose -f docker-compose.prod.yml up --build
 
 dev: volumes
