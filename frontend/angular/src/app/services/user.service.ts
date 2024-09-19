@@ -37,7 +37,9 @@ export class UserService {
 			avatarUrl = avatar;
 			avatarUrl = 'https://' + avatarUrl;
 		}
+		console.log('avatar url before replace in cleanuseravatar is ', avatarUrl)
 		avatarUrl.replace('/api/media', '');
+		console.log('avatar url after replace in cleanuseravatar is ', avatarUrl)
 		return avatarUrl;
 	}
 
