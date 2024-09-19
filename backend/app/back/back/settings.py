@@ -25,14 +25,19 @@ SECRET_KEY = 'django-insecure-dmwp774*exw0fl2%n0@_^aehi(0$-a#9_*49+t2)i!9z*mkccs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['13.51.106.93', 'localhost', 'django', '*']
+ALLOWED_HOSTS = ['13.51.106.93', 'https://13.51.106.93', 'localhost', 'django', '*']
 
 CORS_ALLOWED_ORIGINS = [
-    'https://13.51.106.93'
+	'13.51.106.96',
+    'https://13.51.106.93',
+	'http://13.51.106.93'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://13.51.106.93'  # Add your public IP with HTTPS
+	'13.51.106.96',
+    'https://13.51.106.93/*',
+	'https://13.51.106.93',
+    'http://13.51.106.93'  # if you're also accessing via HTTP
 ]
 
 # Application definition
