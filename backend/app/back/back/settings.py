@@ -33,12 +33,14 @@ CORS_ALLOWED_ORIGINS = [
 	'http://13.51.106.93'
 ]
 
+CSRF_COOKIE_SECURE = False
 CSRF_TRUSTED_ORIGINS = [
 	'13.51.106.96',
     'https://13.51.106.93/*',
 	'https://13.51.106.93',
     'http://13.51.106.93'  # if you're also accessing via HTTP
 ]
+
 
 # Application definition
 
