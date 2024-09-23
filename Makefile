@@ -27,7 +27,7 @@ stop:
 re: clean volumes prod
 
 prod: volumes
-	@docker compose -f docker-compose.prod.yml up --build
+	@docker compose -f docker-compose.prod.yml up -d --build
 
 dev: volumes
 	@sed -i '2s/[^ ]*[^ ]/127.0.0.1:8000/3' .env
