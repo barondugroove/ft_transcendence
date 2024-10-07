@@ -30,7 +30,7 @@ EXPOSE 8000
 ENV DJANGO_SETTINGS_MODULE=back.settings
 
 # Set the default command to run the Django application with Daphne
-CMD daphne -e ssl:port=8000:privateKey=./ssl/nginx.key:certKey=./ssl/nginx.crt back.routing:application
+CMD daphne -e ssl:port=8000:privateKey=./ssl/privkey.pem:certKey=./ssl/fullchain.pem back.routing:application
 
 # Use the entrypoint script
 ENTRYPOINT ["/usr/bin/django-entrypoint.sh"]
