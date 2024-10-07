@@ -58,7 +58,7 @@ class Migration(migrations.Migration):
             name='Avatar',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.FileField(default='default.jpg', upload_to='media/avatars')),
+                ('image', models.FileField(default='default.jpg', upload_to='avatars')),
                 ('user', models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='avatar', to=settings.AUTH_USER_MODEL)),
             ],
         ),
