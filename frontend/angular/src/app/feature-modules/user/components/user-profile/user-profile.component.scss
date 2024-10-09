@@ -1,5 +1,15 @@
 @import '../../../../../colors.scss';
 
+.container-fluid {
+	display: flex;
+	justify-content: center;
+	
+	.profile {
+		width: 95%;
+	}
+}
+
+
 .backpanel {
 	box-shadow: 0.75rem 0.75rem black;
 	border: solid 4px black;
@@ -24,6 +34,16 @@ h2 {
 
 .edit {
 	background-color: $tertiary;
+}
+
+//////////////////////////
+/*		RESPONSIVE		*/
+//////////////////////////
+
+@media (max-width: 600px) {
+	.history {
+		margin-bottom: 8rem;
+	}
 }
 
 //////////////////////////

@@ -18,3 +18,27 @@
 		transform: scale(1.05);
 	}
 }
+
+@media (max-width: 600px) {
+	.container {
+		width: 90%;
+	}
+	.card-img-top {
+		width: 100%;
+		height: 25vw;
+		object-fit: cover;
+	}
+	
+	.card {
+		border: 4px solid black;
+		transition: all .25s;
+		border-radius: 10px;
+		margin-bottom: 50px;
+		padding-bottom: 20px;
+		height: 90%;
+	
+		&:hover {
+			box-shadow: black 5px 5px 5px 0px;
+		}
+	}
+}

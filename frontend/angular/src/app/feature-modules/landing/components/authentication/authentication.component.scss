@@ -9,6 +9,11 @@ form-control {
 	border-color: black;
     border-width: 4px;
 	background-color: #53A6AC;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
 	
 	.modal-footer {
 		border-top: 0;
@@ -31,5 +36,27 @@ form-control {
 		color: #FD8743;
 		text-decoration: underline;
 		cursor: pointer;
+	}
+}
+
+@media (max-width: 600px) {
+	.modal-content {
+		.buttons {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	.modal-body {
+		.logo {
+			display: inherit;
+			justify-content: center;
+			padding-bottom: 1rem;
+		}
+		
+		img {
+			width: 35%;
+			height: auto;
+		}
 	}
 }

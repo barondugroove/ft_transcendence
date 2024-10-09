@@ -6,20 +6,16 @@
 	background-color: $tertiary;
 	justify-content: center;
 	align-items: center;
-	
-	.modal-header {
-		h4 {
-			padding-top: 1rem;
-		}
-		border: 0px;
-	}
+	height: 12.5rem;
 	
 	.modal-body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		border: 0px;
-	}
-	
-	.modal-footer {
-		padding-bottom: 1rem;
-		border: 0px;
+
+		button {
+			margin: 0rem 0.75rem;
+		}
 	}
 }

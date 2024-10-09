@@ -1,5 +1,14 @@
 @import '../../../../styles.scss';
 
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 0rem 2rem;
+	margin-top: 1rem;
+	margin-bottom: 4rem;
+}
+
 .navbar-brand {
 	display: flex;
 
@@ -19,8 +28,8 @@
 	}
 }
 	
-	.navbar-nav {
-		gap: 10px;
+.navbar-nav {
+	gap: 10px;
 	margin-left: 10px;
 }
 
@@ -38,4 +47,34 @@ ul {
 .offcanvas {
 	border: 0 !important;
 	background-color: $tertiary;
+}
+
+//////////////////////////////
+/*		RESPONSIVE CLASS	*/
+//////////////////////////////
+@media (max-width: 600px) {
+	nav {
+		margin: 0rem 1rem;
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.navbar-brand {
+		img {
+			width: 50px;
+			height: auto;
+			border-radius: 50%;
+			box-shadow: 4px 4px 0px black;
+			margin: 1rem 0.25rem;
+		}
+		
+		span {
+			text-shadow: 5px 5px 0px black;
+			font-size: 3rem;
+			color: #FD8743;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
 }

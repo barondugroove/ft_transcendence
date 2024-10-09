@@ -5,6 +5,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-top: 3rem;
 
 	img {
 		border-radius: 50%;
@@ -34,6 +35,12 @@
 
 .modal-footer {
 	border-top: 0;
+	
+	a {
+		color: #FD8743;
+		text-decoration: underline;
+		cursor: pointer;
+	}
 }
 
 .modal-header {
@@ -45,15 +52,6 @@
 	font-size: 2rem;
 	margin-top: 10vh;
 }
-
-.modal-footer {
-	a {
-		color: #FD8743;
-		text-decoration: underline;
-		cursor: pointer;
-	}
-}
-
 
 h2.hprimary{
 	margin-bottom: 1.75rem;
@@ -70,6 +68,48 @@ h2.hsecondary{
 	border: solid 4px #000;
 	box-shadow: 5px 5px 0px 0px #000;
 	background-color: #FFC801;
+}
+
+
+//////////////////////////////
+/*		RESPONSIVE CLASS	*/
+//////////////////////////////
+@media (max-width: 600px) {
+	.header-logo {
+		padding-top: 3rem;
+		font-size: 6rem;
+
+		img {
+			width: 5rem;
+			height: auto;
+			border-radius: 50%;
+			box-shadow: 5px 5px 0px black;
+			margin: -0.5rem 0rem 0.5rem 0.5rem;
+		}
+	}
+
+	.presentation {
+		width: 90%;
+		font-size: 1.5rem;
+		margin-top: 6vh;
+
+		button {
+			margin-top: 3rem;
+		}
+	}
+
+	.paddle-anim, .pongi-anim, .pongo-anim {
+		width: 75px;
+		height: auto;
+	}
+
+	h2.hprimary, h2.secondary {
+		font-size: 1.25rem;
+		padding: 0.5rem 0rem;
+		margin-bottom: 2rem;
+	}
+
+
 }
 
 //////////////////////////////
